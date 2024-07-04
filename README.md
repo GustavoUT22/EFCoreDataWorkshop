@@ -139,6 +139,7 @@ namespace IntroduccionEFCore
   7.- Migraciones con valores por defecto
 
 - Para que tengamos datos de prueba podemos hacer lo siguiente en `ApplicationDbContext.cs`
+
   ```csharp
   using IntroduccionEFCore.Entidades;
   using Microsoft.EntityFrameworkCore;
@@ -162,6 +163,7 @@ namespace IntroduccionEFCore
     }
   }
   ```
+
 - Para que se ejecute el cambio creamos una nueva migración
 
       ```csharp
@@ -371,6 +373,7 @@ namespace IntroduccionEFCore.Controllers
   }
   ```
 - Modificamos nuestro `POST` en `Controllers\GeneroController.cs`
+
   ```csharp
   // POST: api/Genero
   [HttpPost]
@@ -558,7 +561,9 @@ dotnet ef database update
 
 - En el archivo `ApplicationDbContext.cs` tenemos mezcladas configuraciones de varias entidades, con el paso del tiempo podría ser inmanejable
 - Por lo tanto creamos un nuevo directorio en `Entidades\Configuraciones`
+
   - Creamos la configuraciones de Actor con el nombre de archivo `Entidades\Configuraciones\ActorConfig.cs`
+
     ```csharp
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -577,7 +582,9 @@ dotnet ef database update
       }
     }
     ```
+
   - Creamos la configuraciones de Pelicula con el nombre de archivo `Entidades\Configuraciones\PeliculaConfig.cs`
+
     ```csharp
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -594,8 +601,10 @@ dotnet ef database update
       }
     }
     ```
+
   - Creamos la configuraciones de Genero con el nombre de archivo
     `Entidades\Configuraciones\GeneroCofig.cs`
+
     ```csharp
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -611,6 +620,7 @@ dotnet ef database update
       }
     }
     ```
+
 - Una vez creados todos los archivos de configuración tenemos que aplicar esas configuraciones `ApplicationDbContext.cs`
 
 ```csharp
@@ -646,6 +656,7 @@ namespace IntroduccionEFCore
 ### Relación uno a mucho entre Pelicula y Comentarios
 
 - En la clase Comentario `Entidades\Comentario.cs`
+
   ```csharp
   namespace IntroduccionEFCore.Entidades
   {
@@ -662,6 +673,7 @@ namespace IntroduccionEFCore
     }
   }
   ```
+
 - En la clase Pelicula `Entidades\Pelicula.cs`
 
 ```csharp
@@ -690,6 +702,7 @@ dotnet ef migrations add RelacionPeliculaComentarios
 ### Relación muchos a muchos entre Peliculas y Generos
 
 - En la clase Pelicula `Entidades\Pelicula.cs`
+
   ```csharp
   namespace IntroduccionEFCore.Entidades
   {
@@ -708,7 +721,9 @@ dotnet ef migrations add RelacionPeliculaComentarios
     }
   }
   ```
+
 - En la clase Genero `Entidades\Genero.cs`
+
   ```csharp
   using System.ComponentModel.DataAnnotations;
 
@@ -726,6 +741,7 @@ dotnet ef migrations add RelacionPeliculaComentarios
   }
 
   ```
+
 - Creamos la migración
   ```powershell
   dotnet ef migrations add RelacionPeliculasGeneros
@@ -736,6 +752,7 @@ dotnet ef migrations add RelacionPeliculaComentarios
 ### Relación muchos a muchos entre Peliculas y Actores con entidad intermedia
 
 - Crearemos una nueva clase `Entidades\PeliculaActor.cs`
+
   ```powershell
 
   ```
