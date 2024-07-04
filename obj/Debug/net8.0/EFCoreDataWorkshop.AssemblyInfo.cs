@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCoreDataWorkshop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8613c77d479c182e1f36b61719a10c23c9729c45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4a6213a63fdf227373ad54deb1ba1d89ec826e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCoreDataWorkshop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCoreDataWorkshop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

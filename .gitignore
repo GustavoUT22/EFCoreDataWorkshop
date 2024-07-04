@@ -1,0 +1,39 @@
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Compiled files
+bin/
+obj/
+
+# NuGet Packages
+*.nuget.props
+*.lock.json
+packages/
+*.pfx
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Other
+*.log
+node_modules/
+npm-debug.log*
+*.sqlite
+*.sqlite3
+*.sdf
+*.db
+*.db3
+*.bak
+*.ldf
+*.mdf
+*.ipch/
+*.cache
+*.csproj.user
+*.bak
+*.vsconfig
